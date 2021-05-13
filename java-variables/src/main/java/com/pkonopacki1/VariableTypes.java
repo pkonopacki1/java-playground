@@ -6,13 +6,7 @@ package com.pkonopacki1;
  */
 public class VariableTypes 
 {
-    public static void main(String[] args) throws Exception {
-
-        // Below won't compile, bigger type can't be convert to lower. 
-        // We can do it using casting but if value exceeds size, overflow will happen
-        // byte bVar = 128;
-        byte bVarCast = (byte) 128;       //This will give -128  
-        
+    public static void main(String[] args) throws Exception {        
         // The other way round is possible
         byte bVar = 127;
         int iVar = bVar;
