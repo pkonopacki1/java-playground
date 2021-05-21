@@ -7,9 +7,6 @@ package com.pkonopacki1;
 public class VariableTypes 
 {
     public static void main(String[] args) throws Exception {        
-        // The other way round is possible
-        byte bVar = 127;
-        int iVar = bVar;
 
         // Float and double differnce
         // float ends with ...f
@@ -32,8 +29,5 @@ public class VariableTypes
         //----- Other possible integers notations -----//
         int a = 0b0011;
         int b = 1_000_000;
-        if(a != 3) System.out.println("Wrong value");        
-
-
     }
 }

@@ -22,6 +22,11 @@ public class Integers
         byte bVar = 128;
     }
 
-    @Test
-    public void smallToLargeIsPossible()
+    @Test(expected = java.lang.Error.class)
+    public void sumOfBitIsCastToInteger() {
+        byte b1 = 5;
+        byte b2 = 10;
+
+        byte b3 = b1 + b2;        
+    }
 }
