@@ -29,5 +29,10 @@ public class VariableTypes
         //----- Other possible integers notations -----//
         int a = 0b0011;
         int b = 1_000_000;
+
+        //Wrapping and unwrapping
+        //Wrapping
+        Integer intObj = Integer.valueOf(5);
+        int intPrimitive = intObj.intValue();
     }
 }
