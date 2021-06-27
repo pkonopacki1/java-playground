@@ -17,5 +17,9 @@ public class Horse extends Animal{
         return colour;
     }
 
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
     
 }
