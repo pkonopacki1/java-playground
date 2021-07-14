@@ -2,18 +2,12 @@ package com.pkonopacki1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static com.pkonopacki1.RegexClass.testRegex;
 
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
-public class RegexTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+import static com.pkonopacki1.RegexClass.testRegex;
+
+public class RegexClassTest {
     @Test
     public void differentRegexTests()
     {
@@ -32,4 +26,5 @@ public class RegexTest
         // Looking among a range    
         assertEquals(2, testRegex("Only Uppercase is counted", "[A-Z]"));
     }
+    
 }

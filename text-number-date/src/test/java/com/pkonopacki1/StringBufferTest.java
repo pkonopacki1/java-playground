@@ -2,8 +2,6 @@ package com.pkonopacki1;
 
 import static org.junit.Assert.assertTrue;
 
-import java.security.Timestamp;
-
 import org.junit.Test;
 
 public class StringBufferTest {
