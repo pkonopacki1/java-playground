@@ -12,21 +12,15 @@ public class RegexClass
     public static void main( String[] args )
     {
 
-        //. is any character, * is any number of characters
-        String regex = "A.*";
-        String testString = "Ala ma kota";
-        testRegex(testString, regex);
-
-
-
-
-
     }
 
 
-    public static void testRegex(String testString, String regex) {
+    public static int testRegex(String testString, String regex) {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(testString);
-        System.out.println("\"" + testString + "\" matches " + regex + ": " + matcher.matches());
+        int matches = 0;
+        while(matcher.find()) matches++;
+        System.out.println("\"" + testString + "\" matches " + regex + " " + matches + " times");
+        return matches;
     }
 }
