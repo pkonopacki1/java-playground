@@ -29,4 +29,13 @@ public class Integers
 
         byte b3 = b1 + b2;        
     }
+
+    @Test
+    public void assignmentOperatorDoesNOTPromoteValue() {
+        byte b = 127;
+        // b = b+2; //This is not possible and need casitng
+        b += 2;
+
+        assertEquals(-127, b);
+    }
 }
