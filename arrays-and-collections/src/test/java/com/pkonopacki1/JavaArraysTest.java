@@ -1,25 +1,20 @@
 package com.pkonopacki1;
 
-import static org.junit.Assert.assertTrue;
-
-import java.util.Arrays;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class JavaArraysTest 
-{
+public class JavaArraysTest {
 
+    // Uninitialized element in 2D array, will be NULL
     @Test
-    public void testArraysEqual() {
-        int[] firstArray = {1,2,3};
-        int[] secondArray = {1,2,3};
+    public void uninitArrayIn2DArray() {
+        int[][] array2D = new int[3][];
 
+        array2D[0] = new int[]{1,2,3};
+        array2D[1] = new int[]{4,5,6};
 
-        // it's better to use equas Arrays util method, than Object.equals
-        assertTrue(!firstArray.equals(secondArray));
-        assertTrue(Arrays.equals(firstArray, secondArray));
-
-
+        assertEquals(null, array2D[2]);
     }
-
+    
 }

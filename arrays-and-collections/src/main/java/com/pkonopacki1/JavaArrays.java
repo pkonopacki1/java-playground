@@ -18,6 +18,6 @@ public class JavaArrays
 
         System.out.println(Arrays.toString(singleDimensionalArray));
         System.out.println(Arrays.toString(anotherOne));
-        System.out.println(Arrays.toString(twoDimensionalArray));        
+        System.out.println(Arrays.deepToString(twoDimensionalArray));        
     }
 }
