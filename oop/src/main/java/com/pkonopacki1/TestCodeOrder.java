@@ -1,6 +1,6 @@
 package com.pkonopacki1;
 
-public class CodeOrderClass extends CodeOrderSuperClass{
+class CodeOrderClass extends CodeOrderSuperClass{
 
     static {
         System.out.println("Static block of children class");
@@ -11,11 +11,17 @@ public class CodeOrderClass extends CodeOrderSuperClass{
 
     CodeOrderClass() {
         System.out.println("Children class constructor");
-    }
-   
+    } 
 }
 
-class TestCodeOrder {
+ class CodeOrderSuperClass {
+    CodeOrderSuperClass() {
+        System.out.println("Super class constructor");
+    }
+}
+
+
+public class TestCodeOrder {
     public static void main(String[] args) {
         CodeOrderClass codeOrderClass = new CodeOrderClass();
     }

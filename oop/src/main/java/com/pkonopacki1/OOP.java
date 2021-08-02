@@ -4,10 +4,6 @@ import com.pkonopacki1.animals.Animal;
 import com.pkonopacki1.animals.AnimalType;
 import com.pkonopacki1.animals.Horse;
 
-/**
- * Hello world!
- *
- */
 public class OOP 
 {
     int a;
