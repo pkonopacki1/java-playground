@@ -20,5 +20,10 @@ public class Collections {
         // Multiplyig all element with replace all
         arrayList3.replaceAll((i) -> i*2);
         System.out.println("Array after using replace all: " + arrayList3);
+
+        // List.of allows making List of element but does not allow null
+        ArrayList<Integer> arrayList = new ArrayList<>(List.of(1,2,3,null));
+
+
     }
 }
