@@ -1,7 +1,10 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "feeding"
+        "feeding",
+        "care",
+        "talks",
+        "staff"
     ],
     "java.project.outputPath": "bin"
 }
