@@ -4,7 +4,7 @@ class Door implements AutoCloseable {
 
     @Override
     public void close() {
-        System.out.println("Close the doors");        
+        System.out.println("Close the doors");       
     }
 
 }
@@ -34,10 +34,7 @@ public class TryWithResources {
             System.out.println("Null pointer caught");
         } finally {
             System.out.println("Finally at the end");
-        }
-    
-
-        
+        }      
 
     }
 
