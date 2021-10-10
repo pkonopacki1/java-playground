@@ -1,9 +1,9 @@
-package com.pkonopacki1;
+package com.pkonopacki1.collections;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Collections {
+public class ArrayList {
     // Regular declaration
     ArrayList<Integer> arrayList = new ArrayList<>();    
     // Declaration with initial size
