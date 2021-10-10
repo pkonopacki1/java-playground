@@ -1,9 +1,10 @@
 package com.pkonopacki1.collections;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class ArrayList {
+public class Lists {
     // Regular declaration
     ArrayList<Integer> arrayList = new ArrayList<>();    
     // Declaration with initial size
@@ -22,7 +23,23 @@ public class ArrayList {
         System.out.println("Array after using replace all: " + arrayList3);
 
         // List.of allows making List of element but does not allow null
-        ArrayList<Integer> arrayList = new ArrayList<>(List.of(1,2,3,null));
+        try {
+            ArrayList<Integer> arrayList = new ArrayList<>(List.of(1,2,3,null));
+        } catch (Exception e) {
+            System.out.println("Adding null to a List.of method: " + e);
+        }
+
+        // Index of a non existing element
+        System.out.println("Index of 123: " + arrayList3.indexOf(123));
+
+        // Belowe example shows how manipluating sublist also affects list
+        System.out.println("-----SUBLIST-----");
+        System.out.println("List before manipulation: " + arrayList3);
+        List subList = arrayList3.subList(2, 6);
+        System.out.println("Sublist before sorting: " + subList);
+        subList.sort(Comparator.reverseOrder());
+        System.out.println("Sublist after sorting: " + subList);
+        System.out.println("List after manipulation: " + arrayList3);
 
 
     }
