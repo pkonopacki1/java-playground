@@ -23,7 +23,7 @@ class TraversingThroughCollection {
     }
 }
 
-public class CollectionsSharedMethods {
+public class CollectionSharedMethods {
 
     public static void main(String[] args) {
         List<String> listOfString = new ArrayList<>(List.of("a", "b", "c"));
