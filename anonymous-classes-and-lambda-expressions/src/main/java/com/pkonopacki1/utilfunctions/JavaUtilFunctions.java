@@ -1,5 +1,6 @@
-package com.pkonopacki1;
+package com.pkonopacki1.utilfunctions;
 
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -13,6 +14,8 @@ public class JavaUtilFunctions {
         //-----Example of functional interfaces from java.util.function-----//
         // Unary operator returns same type that accepts. There is also binaryOperator for two arguments
         UnaryOperator<String> addString = s -> s + " I add this sentence";
+        // There is also a binary operator
+        BinaryOperator<Integer> meanValue = (s,t) -> (s+t)/2;
         // Consumer accepts argument and returns no result
         Consumer<Integer> iPrintInteger = i-> System.out.println("I print this int: " + i);
         // Predicate accepts one argument, returns boolean
@@ -32,6 +35,7 @@ public class JavaUtilFunctions {
     
         //-----Testing functions-----//
         System.out.println(addString.apply("This is quite useless function:"));
+        System.out.println("Mean value of 10 and 20: " + meanValue.apply(10, 20));
         iPrintInteger.accept(502);
         System.out.println("Word Apple starts with A: " + doIStartWithA.test("Apple"));
         System.out.println(preparedString.get());
