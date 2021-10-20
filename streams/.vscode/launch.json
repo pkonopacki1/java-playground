@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch OptionalExample",
+            "request": "launch",
+            "mainClass": "com.konopackipio1.OptionalExample",
+            "projectName": "streams"
+        },
+        {
+            "type": "java",
+            "name": "Launch StreamMethods",
+            "request": "launch",
+            "mainClass": "com.konopackipio1.StreamMethods",
+            "projectName": "streams"
+        },
+        {
+            "type": "java",
+            "name": "Launch Streams",
+            "request": "launch",
+            "mainClass": "com.konopackipio1.Streams",
+            "projectName": "streams"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",

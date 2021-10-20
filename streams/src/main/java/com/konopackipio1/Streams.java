@@ -25,6 +25,12 @@ public class Streams {
         }
         Stream s5 = sBuilder.build();
         s5.forEach(System.out::println);
+        // You can't invoke build method after building
+        try {
+            s5 = sBuilder.build();
+        } catch (Exception e) {
+            System.out.println("You can't invoke build after it has already been done: " + e);
+        }
 
 
         // Using terminal operation twice
@@ -34,6 +40,13 @@ public class Streams {
         } catch (IllegalStateException e) {
             System.out.println("You can't use terminal operation on a stream that already has been prcossed: " + e);
         }
+
+        // Stream iterate
+        Integer x = Stream
+            .iterate(10, t -> t < 100, t -> t +5)
+            .reduce((a,b) -> a+b).get();
+        System.out.println("Sum of iterate generated stream:" + x);
+        
         
 
     }
