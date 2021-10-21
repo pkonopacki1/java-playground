@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SearchMethods",
+            "request": "launch",
+            "mainClass": "com.konopackipio1.SearchMethods",
+            "projectName": "streams"
+        },
+        {
+            "type": "java",
             "name": "Launch OptionalExample",
             "request": "launch",
             "mainClass": "com.konopackipio1.OptionalExample",
