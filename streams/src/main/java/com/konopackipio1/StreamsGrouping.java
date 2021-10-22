@@ -17,7 +17,7 @@ public class StreamsGrouping {
                                         .collect(Collectors.groupingBy(Integer::intValue, Collectors.counting()));
         System.out.println(intMap);
 
-        // Partioning by
+        // Partioning by - creating two different data sets
         Map<Boolean, List<Integer>> evenOddNumbers = Stream   
                                                 .generate(()-> r.nextInt(10))
                                                 .limit(20)
