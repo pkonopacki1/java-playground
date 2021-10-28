@@ -1,4 +1,4 @@
-package com.konopackipio1.executorService.SynchronisingThreads;
+package com.konopackipio1.synchronisingThreads;
 
 import java.util.Collections;
 import java.util.List;
