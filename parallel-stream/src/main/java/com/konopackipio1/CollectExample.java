@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 public class CollectExample {
     public static void main(String[] args) {
@@ -26,7 +25,7 @@ public class CollectExample {
         System.out.println("Reduce result: " + result2);
 
         List<String> stringList = initSet.parallelStream()
-                                            .collect(ArrayList::new, (a,b) -> a.add(b), (a,b) -> b.addAll(a));
+                                            .collect(ArrayList::new, (a,b) -> a.add(b), (a,b) -> a.addAll(b));
 
         System.out.println("Array collect result :" + stringList);
 
