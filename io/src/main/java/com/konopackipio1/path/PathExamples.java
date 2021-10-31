@@ -1,4 +1,4 @@
-package com.konopackipio1;
+package com.konopackipio1.path;
 
 import java.net.URI;
 import java.nio.file.Path;
