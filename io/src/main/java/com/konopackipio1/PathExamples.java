@@ -6,7 +6,6 @@ import java.nio.file.Paths;
 
 public class PathExamples {
     public static void main(String[] args) {
-        
         pathCreations();
     }
 
