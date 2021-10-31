@@ -25,3 +25,6 @@ io/.project
 io/dog.ser
 io/randomNumbers.txt
 io/randomNumbersDataStream.bin
+io/Hello,
+io/newFileName
+io/testFile.txt
