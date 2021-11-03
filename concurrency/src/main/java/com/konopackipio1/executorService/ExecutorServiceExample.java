@@ -1,4 +1,4 @@
-package com.konopackipio1;
+package com.konopackipio1.executorService;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -20,7 +20,11 @@ public class ExecutorServiceExample {
             }
         }
 
-        executorService.shutdown();
+
+        // shutdown will wait for all threads to stop, but won't allow new ones to start
+        // shutdownNow will try to stop current thread execution
+        //executorService.shutdown();
+        executorService.shutdownNow();
         
     }
  
@@ -37,12 +41,12 @@ public class ExecutorServiceExample {
 
     private static void methodTwo() {
         try {
-            for(int i = 0; i < 5; i++) {
+            for(int i = 0; i < 10; i++) {
                 Thread.sleep(250);
                 System.out.println("Method two iteration: " + i);
             }
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            System.out.println("Method two interrupted");
         }
     }
 }
