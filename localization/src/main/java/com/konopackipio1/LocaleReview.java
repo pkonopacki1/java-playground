@@ -9,6 +9,7 @@ public class LocaleReview
     public static void main( String[] args )
     {
         testAvailableLocales();
+        testLocalCreate();
         
     }
 
@@ -24,6 +25,15 @@ public class LocaleReview
 
         System.out.println("Default locale: " + Locale.getDefault().getDisplayName());
         System.out.println("Default locale in italian: " + Locale.getDefault().getDisplayName(Locale.ITALIAN));
+    }
 
+    private static void testLocalCreate() {
+        Locale locale1 = new Locale("pl");
+        Locale locale2 = new Locale("pl", "pl");
+        System.out.println("One arg constuctor: " + locale1.getDisplayName());
+        System.out.println("Two args constuctor: " + locale2.getDisplayName());
+
+        Locale locale3 = new Locale.Builder().setRegion("pt").build();
+        System.out.println("Locale from builder: " + locale3.getDisplayName());
     }
 }
