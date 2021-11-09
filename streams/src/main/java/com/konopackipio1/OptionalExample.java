@@ -1,54 +1,31 @@
 package com.konopackipio1;
 
-import java.util.List;
 import java.util.Optional;
 
-class Student {
-    String name;
-    Optional<Double> score = Optional.empty();
-
-    public Student(String name) {
-        this.name = name;
-    }
-
-    public Student(String name, Double score) {
-        this.name = name;
-        this.score = Optional.ofNullable(score);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    
-    public Optional<Double> getScore() {
-        return score;
-    }
-
-    public void setScore(Double score) {
-        this.score = Optional.ofNullable(score);
-    }
-
-    @Override
-    public String toString() {
-        return name + ", score: " + score.get();
-    }
+class Computer {
 
 }
 
 public class OptionalExample {
     public static void main(String[] args) {
-        Student student1 = new Student("Tomasz", 100.0);
-        Student student2 = new Student("Cyprian");
+        testOptionalCreation();
+        
 
-        List.of(student1, student2)
-            .stream()
-            .filter(s -> s.getScore().isPresent())
-            .forEach(System.out::println);
+    }
+
+    private static void testOptionalCreation() {
+        // Empty optional
+        Optional<Computer> computer = Optional.empty();
+
+        // Not nullable, exception will be thrown
+        try {
+            Optional<Computer> computer2 = Optional.of(null);
+        } catch (NullPointerException e) {
+            System.err.println("Opitonal.of can't hold null");
+        }
+
+        // Nullable
+        Optional<Computer> computer3 = Optional.ofNullable(null);
     }
     
 }
