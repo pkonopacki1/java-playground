@@ -44,6 +44,7 @@ public class DefaultClassingMethods {
         Move move = new Move();
         move.run();
         move.walk();
+        System.out.println(move.getSpeed());
     }
     
 }

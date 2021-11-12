@@ -15,6 +15,13 @@ class CodeOrderClass extends CodeOrderSuperClass{
 }
 
  class CodeOrderSuperClass {
+    static {
+        System.out.println("Static block of super class");
+    }
+    {
+        System.out.println("IIB of super class");
+    }
+
     CodeOrderSuperClass() {
         System.out.println("Super class constructor");
     }
@@ -24,5 +31,7 @@ class CodeOrderClass extends CodeOrderSuperClass{
 public class TestCodeOrder {
     public static void main(String[] args) {
         CodeOrderClass codeOrderClass = new CodeOrderClass();
+        System.out.println("------Another object creation-----");
+        new CodeOrderClass();
     }
 }

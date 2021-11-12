@@ -3,7 +3,7 @@ package com.pkonopacki1;
 public class Overriding {
     public static void main(String[] args) {
         System.out.println(new ChildOverrriding().method());
-        System.out.println(new SuperOverriding().method());        
+        System.out.println(new SuperOverriding().method());      
     }
 }
 

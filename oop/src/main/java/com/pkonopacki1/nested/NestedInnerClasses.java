@@ -22,7 +22,7 @@ public class NestedInnerClasses {
     public static void main(String[] args) {
         //Below code shows that inner classes can't be accessed directly
         OuterClass oc = new OuterClass();
-        OuterClass.InnerClass ic = oc.new InnerClass(); // Take attention at this construct
+        OuterClass.InnerClass ic = oc.new InnerClass(); // Take attention at this construct 
 
         ic.innerClassDoSomething();
         ic.getOuterClassField();
