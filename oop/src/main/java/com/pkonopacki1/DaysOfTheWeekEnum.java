@@ -1,6 +1,11 @@
 package com.pkonopacki1;
 
-public enum DaysOfTheWeekEnum {
+interface EnumInterface {
+    void enumMethod();
+}
+
+// Enum can't extend class but it can implement an interface
+public enum DaysOfTheWeekEnum implements EnumInterface {
     MONDAY("mond", "Start of the week"),
     TUESDAY("tue"), 
     //Below we can see that these objects behave like anonymous classes, and we can e.g. implement custom method
@@ -29,6 +34,12 @@ public enum DaysOfTheWeekEnum {
 
     String doSomethingEnum() {
         return "Enum standard method";
+    }
+
+    @Override
+    public void enumMethod() {
+        // TODO Auto-generated method stub
+        
     }
 
        
