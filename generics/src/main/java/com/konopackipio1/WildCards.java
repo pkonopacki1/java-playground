@@ -18,7 +18,9 @@ public class WildCards {
     public static void method(List<?> t) {
         System.out.println(t);
 
-    }    
+    }
+
+
     
     public static void main(String[] args) {
         WildCards wildCards = new WildCards();
@@ -26,10 +28,12 @@ public class WildCards {
 
         // Valid usages
         wildCards.method(list);
-        wildCards.<List<?>>method(list);
         // Invalid usgaes
         // wildCards.<? extends List>method(list);
 
+        // Won't compile because compiler won't know which class should add
+        List<? extends String> list1 = new ArrayList<>(List.of("abc", "def"));
+        // list1.add("ghi");
     }
     
 }

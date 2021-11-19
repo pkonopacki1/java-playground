@@ -1,5 +1,7 @@
 package com.konopackipio1;
 
+import java.util.ArrayList;
+import java.util.List;
 
 //example of generic class
 class GenericClass<T> {
@@ -13,6 +15,18 @@ class GenericClass<T> {
     public void getNumber() {
         if(type instanceof Number) {
             System.out.println("Type is a number");
+        } else {
+            System.out.println("Type is not a number");
+        }
+    }
+
+    public static <T extends Number> void getNumberBound(T number) {
+        System.out.println(number.intValue());
+    }
+
+    public <S extends String> void printList(List<S> list) {
+        for (Object o: list) {
+            System.out.println(o);            
         }
     }
 }
@@ -30,6 +44,15 @@ public class Generics
     {
         GenericClass<Integer> genericClass = new GenericClass<>(Integer.valueOf(19));
         genericClass.getNumber();
+        var genericClass2 = new GenericClass<String>("hello");
+        genericClass2.getNumber();
+
+        GenericClass.getNumberBound(3.14);
+
+
+        List<String> list = new ArrayList<>(List.of("abc", "def"));
+        genericClass.printList(list);
+
         // Using generic method
         NonGenericWithGenericMethod nonGenericWithGenericMethod = new NonGenericWithGenericMethod();
         nonGenericWithGenericMethod.doSomething("Hello");

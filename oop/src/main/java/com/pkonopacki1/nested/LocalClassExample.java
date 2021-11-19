@@ -9,7 +9,7 @@ class OuterLocalClass {
         height = height *2;
     }
 
-    public void outerClassMethod() {
+    public int outerClassMethod() {
         int width;
         width = 5;
         // width = 10; // If this line would be ucommented, widht would no longer be effectively final
@@ -19,12 +19,16 @@ class OuterLocalClass {
                 // height is not effectively final but it is an instance field, not a local one
                 return length * width * height;
             }
-
             
         }
+
+        return new LocalClass().volume();
     }
 }
 
 public class LocalClassExample {
+    public static void main(String[] args) {
+        System.out.println(new OuterLocalClass().outerClassMethod());
+    }
     
 }

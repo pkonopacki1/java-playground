@@ -6,8 +6,11 @@ public class CastingClass {
         // Below won't compile, wrong casting
         // Dog dog = (Animal) new Dog();
 
+        Dog puppy = new Dog();
+        Puppy puppy2 = (Puppy) new Dog();
+
         //This is a class cast exception ona runtime
-        Dog dog = (Dog) animal1;
+        // Dog dog = (Dog) animal1;
 
         
     }
@@ -19,8 +22,12 @@ class Animal {
     }
 }
 
-class Dog extends Animal {
+class Dog extends Animal implements Puppy {
     public void getName() {
         System.out.println("Dog");
     }
+}
+
+interface Puppy {
+
 }
