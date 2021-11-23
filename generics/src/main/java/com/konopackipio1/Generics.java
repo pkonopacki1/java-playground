@@ -49,7 +49,6 @@ public class Generics
 
         GenericClass.getNumberBound(3.14);
 
-
         List<String> list = new ArrayList<>(List.of("abc", "def"));
         genericClass.printList(list);
 
