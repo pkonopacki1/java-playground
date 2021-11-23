@@ -1,45 +1,51 @@
 package com.konopackipio1;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
-class Person {
-    String name;
-
-    public Person(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }   
-    
-    @Override
-    public String toString() {
-        return name;
-    }
-
-}
 
 public class StreamMethods {
     public static void main(String[] args) {
-        // peek
-        Consumer<Person> modifyName = p -> { 
-            p.setName("mr " + p.getName());
-            System.out.println("peek: " + p.getName());  
-        };
-        List<Person> list = new ArrayList<>(List.of(new Person("Piotr"), new Person("Cyprian"), new Person("Tomasz")));
-        List<Person> list2 = list.stream()
-            .peek(modifyName)
-            .collect(Collectors.toList());
-        System.out.println(list2);
-        
+        testReduce();
+        testReduceParallel();
+
+    }
+
+    private static void testReduce() {
+        System.out.println("-----TEST REDUCE SEQUENTIAL-----");
+        List<String> initStringLIst = List.of("abc", "defg", "mnop");
+
+        int stringsLengthsSum = initStringLIst.stream().reduce(0, 
+            (i, s) -> {
+               int sum =  i + s.length();
+               System.out.println("accumulator: " + sum);
+               return sum;}, 
+            (i, j) -> {
+            int sum = i +j;
+            System.out.println("combiner: " + sum);
+            return sum;
+        });
+
+        System.out.println("Strings length sum from sequential: " + stringsLengthsSum);
+    }
+
+    // The third parameter is useful only in parallel 
+    private static void testReduceParallel() {
+        System.out.println("-----TEST REDUCE PARALLEL-----");
+        List<String> initStringLIst = List.of("abc", "defg", "mnop");
+
+        int stringsLengthsSum = initStringLIst.stream().parallel().reduce(0, 
+            (i, s) -> {
+               int sum =  i + s.length();
+               System.out.println("accumulator: " + sum);
+               return sum;}, 
+            (i, j) -> {
+            int sum = i +j;
+            System.out.println("combiner: " + sum);
+            return sum;
+        });
+
+
+        System.out.println("Strings length sum from parallel: " + stringsLengthsSum);
     }
     
 }
