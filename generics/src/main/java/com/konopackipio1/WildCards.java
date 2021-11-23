@@ -20,6 +20,10 @@ public class WildCards {
 
     }
 
+    <T> void method(<? extends String> type) {
+
+    }
+
 
     
     public static void main(String[] args) {
