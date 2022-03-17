@@ -5,9 +5,9 @@ import java.util.concurrent.Executors;
 
 public class ExecutorServiceExample {
     public static void main(String[] args) {
-        // In this example you can notice that because we run single thread, method two will start only after method one
-        // finishes
+        // Depending which type of executor we use, we get different result. SingleThread will wait for one thread to finish, cached thread will run in parallel
         ExecutorService executorService = Executors.newSingleThreadExecutor();
+        // ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(ExecutorServiceExample::methodOne);
         executorService.execute(ExecutorServiceExample::methodTwo);
 
