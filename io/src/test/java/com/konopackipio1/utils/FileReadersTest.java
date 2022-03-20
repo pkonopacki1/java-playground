@@ -8,12 +8,12 @@ public class FileReadersTest {
 
     @Test
     public void testReadBigFile() {
-        assertEquals(3, FileReaders.readBigFile("src/test/testInput.txt").size());
+        assertEquals(3, FileReaders.readBigFile("src/test/test_files/testInput.txt").size());
     }
 
     @Test
     public void testSmallBigFile() {
-        assertEquals(3, FileReaders.readSmallFile("src/test/testInput.txt").size());
+        assertEquals(3, FileReaders.readSmallFile("src/test/test_files/testInput.txt").size());
     }
 
     @Test
