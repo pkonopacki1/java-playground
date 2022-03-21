@@ -27,6 +27,7 @@ public class ExecutorServiceSubmitExample {
 
         System.out.println(returnSubmit.get());
 
+        executorService.shutdown();
         
     }
     
