@@ -1,14 +1,15 @@
 package com.pkonopacki1;
 
 /**
- * Hello world!
- *
+ * 
+ *  Primitive data types available in Java
+ * 
  */
-public class VariableTypes 
+public class DataTypes 
 {
     public static void main(String[] args) throws Exception {        
 
-        // Float and double differnce
+        //-----FLOATERS------//
         // float ends with ...f
         float fVar = 1.3f;
         double dVar = 2.3;
@@ -29,10 +30,5 @@ public class VariableTypes
         //----- Other possible integers notations -----//
         int a = 0b0011;
         int b = 1_000_000;
-
-        //Wrapping and unwrapping
-        //Wrapping
-        Integer intObj = Integer.valueOf(5);
-        int intPrimitive = intObj.intValue();
     }
 }
