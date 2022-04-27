@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 
-public class Integers 
+public class IntegersTest 
 {
     @Test
     // We can do it using casting but if value exceeds size, overflow will happen

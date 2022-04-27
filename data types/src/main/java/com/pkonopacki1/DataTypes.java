@@ -4,6 +4,7 @@ package com.pkonopacki1;
  * 
  *  Primitive data types available in Java
  * 
+ * 
  */
 public class DataTypes 
 {
@@ -14,7 +15,9 @@ public class DataTypes
         float fVar = 1.3f;
         double dVar = 2.3;
 
-        // Same as with integers, won't compile
+
+        //-----DATA CAPACITY-----///
+        // This will not compile as float has a smaller capacity than double
         // fVar =  dVar;
 
         // This works fine
