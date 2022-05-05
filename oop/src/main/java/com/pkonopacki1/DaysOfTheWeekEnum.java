@@ -26,6 +26,7 @@ public enum DaysOfTheWeekEnum implements EnumInterface {
     DaysOfTheWeekEnum(String abr, String comment) {
         this.abr = abr;
         this.comment = comment;
+        System.out.println("Enum constructor");
     }
 
     DaysOfTheWeekEnum(String abr) {
@@ -48,8 +49,10 @@ public enum DaysOfTheWeekEnum implements EnumInterface {
 
 class EnumTest {
     public static void main(String[] args) {
-        for(DaysOfTheWeekEnum day: DaysOfTheWeekEnum.values()) {
-            System.out.println(day + ": " + day.abr + ": " + day.comment + ": " + day.doSomethingEnum());
-        }
+        // for(DaysOfTheWeekEnum day: DaysOfTheWeekEnum.values()) {
+        //     System.out.println(day + ": " + day.abr + ": " + day.comment + ": " + day.doSomethingEnum());
+        // }
+
+        DaysOfTheWeekEnum daysOfTheWeekEnum = DaysOfTheWeekEnum.MONDAY;
     }
 }

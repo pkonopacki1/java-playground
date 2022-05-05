@@ -1,5 +1,6 @@
 package com.konopackipio1.files;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -13,6 +14,9 @@ public class FilesClassExamples {
         testExists();
         testFilesInfos();
         testReadWrite();
+
+        File file = new File("randomNumbers.txt");
+        System.out.println(file.listFiles());
     }
 
     private static void testExists() {

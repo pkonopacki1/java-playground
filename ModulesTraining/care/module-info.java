@@ -7,6 +7,5 @@ javac -p mods -d care care/zoo/animal/care/details/*.java care/zoo/animal/care/m
 */
 
 module zoo.animal.care {
-    exports zoo.animal.care.medical;
-    requires zoo.animal.feeding;    
+    requires transitivie zoo.animal.feeding;    
 }

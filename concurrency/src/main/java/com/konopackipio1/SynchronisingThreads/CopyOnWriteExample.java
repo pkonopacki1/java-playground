@@ -22,8 +22,10 @@ public class CopyOnWriteExample {
     // This methods iterates through list and modifies is at the same time
     private static void testList(List<String> list) {
         for (String object : list) {
-            list.remove(object);
-            list.add("New: " + object);
+            if(object.startsWith("C")) {
+                list.remove(object);
+                list.add("New: " + object);
+            }
         }
     }
 }
