@@ -4,7 +4,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class StringBufferTest {
+/**
+ * This test shows that for concatenating many string, it's more optimal to use stringbuilder
+ */
+public class StringBuilderTest {
 
     @Test
     public void stringBufferIsFasterForConcatenation() {

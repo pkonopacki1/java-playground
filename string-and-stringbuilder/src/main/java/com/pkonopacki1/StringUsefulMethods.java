@@ -2,14 +2,25 @@ package com.pkonopacki1;
 
 import java.util.Arrays;
 
-public class Strings {
+public class StringUsefulMethods {
     public static void main(String[] args) {
+        isBlankVsIsEmptyTest();
         testCompare();
         testTrim();
         testValueOf();
         testSubstring();
         testSplit();
+    }
 
+    private static void isBlankVsIsEmptyTest() {
+        System.out.println("-----TEST ISBLANK VS ISEMPTY-----");
+        isBlankVsIsEmpty(" ");
+        isBlankVsIsEmpty("");
+    }
+
+    private static void isBlankVsIsEmpty(String stringToTest) {
+        System.out.println("Is blank: " + stringToTest.isBlank());
+        System.out.println("Is empty: " + stringToTest.isEmpty());
     }
 
     private static void testCompare() {
