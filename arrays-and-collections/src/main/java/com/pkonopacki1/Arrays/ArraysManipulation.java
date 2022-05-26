@@ -1,4 +1,4 @@
-package com.pkonopacki1;
+package com.pkonopacki1.Arrays;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -31,5 +31,5 @@ public class ArraysManipulation {
 
         return arr;
     }
-    
+
 }
