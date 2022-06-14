@@ -6,6 +6,11 @@ import java.util.List;
 
 public class AsListAndListOfMethods {
     public static void main(String[] args) {
+        createAsList();
+        createListof();
+    }
+
+    private static void createAsList() {
         List<String> list = Arrays.asList("abc", "def");
         System.out.println("List created with asList method before manipulation: " + list);
         try {
@@ -16,7 +21,9 @@ public class AsListAndListOfMethods {
         // has umodifiable size
         list.set(0, "new string"); // This works fine, we still can modify elements
         System.out.println("List created with asList method after manipulation: " + list);
+    }
 
+    private static void createListof() {
         try {
             List<String> list2 = List.of("abc", "def");
             list2.set(0, "new string"); // This will throw an java.lang.UnsupportedOperationException, this list is
