@@ -1,6 +1,5 @@
 package com.konopackipio1;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,12 +16,7 @@ public class FinalCollections {
         setIncorrect.add("banana");
 
         // This approach is correct because we return unmodifiable set
-        // NOTICE: we could still modify setCorrect through temp reference, this is why
-        // we don't return it
-        Set<String> temp = new HashSet<>();
-        temp.add("watermelon");
-        temp.add("mango");
-        setCorrect = Collections.unmodifiableSet(temp);
+        setCorrect = Set.copyOf(setIncorrect);
     }
 
     public static void main(String[] args) {
