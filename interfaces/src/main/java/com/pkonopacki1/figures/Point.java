@@ -1,4 +1,4 @@
-package com.pkonopacki1;
+package com.pkonopacki1.figures;
 
 public class Point {
     private double x;
@@ -30,8 +30,4 @@ public class Point {
         return "x: " + String.valueOf(x) + " ,y: " + String.valueOf(y);
     }
 
-    
-
-    
-    
 }

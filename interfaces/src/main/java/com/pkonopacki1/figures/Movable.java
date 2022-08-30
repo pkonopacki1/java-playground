@@ -1,4 +1,4 @@
-package com.pkonopacki1;
+package com.pkonopacki1.figures;
 
 @FunctionalInterface
 public interface Movable {
