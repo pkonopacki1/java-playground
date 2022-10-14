@@ -26,8 +26,8 @@ public class ComparableExample {
 
 class Book implements Comparable<Book> {
 
-    private String author;
-    private String titile;
+    private final String author;
+    private final String titile;
 
     public Book(String author, String titile) {
         this.author = author;
