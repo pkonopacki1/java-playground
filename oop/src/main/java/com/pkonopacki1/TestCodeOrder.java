@@ -12,6 +12,10 @@ class CodeOrderClass extends CodeOrderSuperClass{
     CodeOrderClass() {
         System.out.println("Children class constructor");
     } 
+
+    CodeOrderClass(String message) {
+        System.out.println("Overloaded version constructor: " + message);
+    }
 }
 
  class CodeOrderSuperClass {
@@ -30,8 +34,8 @@ class CodeOrderClass extends CodeOrderSuperClass{
 
 public class TestCodeOrder {
     public static void main(String[] args) {
-        CodeOrderClass codeOrderClass = new CodeOrderClass();
-        System.out.println("------Another object creation-----");
         new CodeOrderClass();
+        System.out.println("------Another object creation-----");
+        new CodeOrderClass("hello");
     }
 }

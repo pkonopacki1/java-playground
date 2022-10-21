@@ -39,8 +39,7 @@ public enum DaysOfTheWeekEnum implements EnumInterface {
 
     @Override
     public void enumMethod() {
-        // TODO Auto-generated method stub
-        
+                
     }
 
        
@@ -49,10 +48,6 @@ public enum DaysOfTheWeekEnum implements EnumInterface {
 
 class EnumTest {
     public static void main(String[] args) {
-        // for(DaysOfTheWeekEnum day: DaysOfTheWeekEnum.values()) {
-        //     System.out.println(day + ": " + day.abr + ": " + day.comment + ": " + day.doSomethingEnum());
-        // }
 
-        DaysOfTheWeekEnum daysOfTheWeekEnum = DaysOfTheWeekEnum.MONDAY;
     }
 }
