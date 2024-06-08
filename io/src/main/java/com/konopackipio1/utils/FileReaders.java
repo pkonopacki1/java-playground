@@ -14,6 +14,16 @@ import java.util.List;
 
 public class FileReaders {
 
+    public static void main(String[] args) {
+        System.out.println("Reading small file...");
+        List<String> smallFile = readSmallFile("./testFile.txt");
+        smallFile.forEach(System.out::println);
+
+        System.out.println("Reading big file...");
+        List<String> bigFile = readBigFile("./testFile.txt");
+        bigFile.forEach(System.out::println);
+    }
+
     public static List<String> readSmallFile(String pathString) {
         List<String> readLines = new ArrayList<>();
 
@@ -22,7 +32,7 @@ public class FileReaders {
         try {
             readLines = Files.readAllLines(path);
         } catch (IOException e) {
-            System.err.println("Could not print file: " + pathString);
+            System.err.println("Could not access the file: " + pathString);
         }
 
         return readLines;
@@ -33,10 +43,9 @@ public class FileReaders {
 
         Path path = Paths.get(pathString);
 
-        try {
-            BufferedReader reader = Files.newBufferedReader(path);
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line = null;
-            while((line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 readLines.add(line);
             }
         } catch (IOException e) {
@@ -45,5 +54,5 @@ public class FileReaders {
 
         return readLines;
     }
-    
+
 }
