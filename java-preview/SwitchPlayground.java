@@ -1,6 +1,5 @@
 public class SwitchPlayground {
 
-
     public static void main(String[] args) {
         switchStatement();
         switchExpression();
