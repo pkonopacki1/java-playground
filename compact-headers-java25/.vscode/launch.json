@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.pkonopacki1.App",
+            "projectName": "compact-headers-java25"
+        },
+        {
+            "type": "java",
+            "name": "App$ExampleClass",
+            "request": "launch",
+            "mainClass": "com.pkonopacki1.App$ExampleClass",
+            "projectName": "compact-headers-java25"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "runtimeExecutable": "ts-node",
+            "args": [
+                "${file}"
+            ]
+        }
+    ]
+}
