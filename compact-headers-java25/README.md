@@ -3,6 +3,10 @@
 In java 25 compact headers were added as a feature (not enabled by default though).
 This example showing the difference between used feature and not used.
 
+## Resources
+
+- <https://github.com/smijran/presentations>
+
 ## Run
 
 Running without compact headers, just run regular program:
